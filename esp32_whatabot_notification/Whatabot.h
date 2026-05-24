@@ -37,7 +37,7 @@ class Whatabot {
         Serial.println("Message sent!");
         return true;
       } else {
-        Serial.printf("Failure, kode HTTP: %d\n", httpCode);
+        Serial.printf("Failure, code HTTP: %d\n", httpCode);
         return false;
       }
     }
