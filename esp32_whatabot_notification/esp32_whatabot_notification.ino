@@ -7,7 +7,7 @@ const char* pass = "YOUR_PASSWORD";
 
 // Whatabot Credentials
 String apiKey = "YOUR API KEY";
-String phone  = "YOUR NUMBER";   // Destination number (country code + number)
+String phone  = "YOUR NUMBER";   // Destination number (country without code + number)
 
 Whatabot bot(apiKey, phone);
 
