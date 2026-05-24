@@ -1,37 +1,37 @@
 # ESP32 WhatsApp Notifier with Whatabot
 
-Mengirim pesan WhatsApp dari ESP32 menggunakan API **Whatabot** dengan metode HTTP GET.  
-Cocok untuk notifikasi IoT, alarm, atau monitoring jarak jauh.
+Sending WhatsApp messages from an ESP32 using the API **Whatabot** using the HTTP GET method.  
+Ideal for IoT notifications, alarms, or remote monitoring.
 
-## 📦 Library yang Diperlukan
+## 📦 Required Libraries
 
-Kode ini menggunakan library bawaan dari **ESP32 Arduino Core**, **tidak perlu instalasi tambahan**.  
-Pastikan Anda sudah menginstal board ESP32 di Arduino IDE.
+This code uses the built-in library from the **ESP32 Arduino Core**; **no additional installation is required**.  
+Make sure you have installed the ESP32 board in the Arduino IDE.
 
-| Library | Status | Keterangan |
+| Library | Status | Description |
 |---------|--------|-------------|
-| `WiFi.h` | Bawaan | Menghubungkan ESP32 ke jaringan |
-| `HTTPClient.h` | Bawaan | Mengirim request HTTP |
-| `UrlEncode.h` | Bawaan | Encoding teks untuk URL |
+| `WiFi.h` | Default | Connecting the ESP32 to the network |
+| `HTTPClient.h` | Default | Sending an HTTP request |
+| `UrlEncode.h` | Default | Text encoding for URLs |
 
-> ✅ **Tidak perlu** menginstal library tambahan melalui Library Manager.  
-> Semua library di atas tersedia otomatis setelah Anda menginstal **ESP32 board**.
+> ✅ **You don't need** to install additional libraries via the Library Manager.  
+> All of the above libraries are automatically available once you install the **ESP32 board**, but if they aren’t there, you can simply search for them in the Arduino IDE’s library or download them from an external source..
 
-## 🔧 Prasyarat
+## 🔧 Prerequisites
 
-1. **Arduino IDE** dengan board ESP32 terinstal.  
-   - [Panduan instalasi board ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
-2. **Akun Whatabot** (gratis) untuk mendapatkan API Key.  
-   - Daftar di [https://whatabot.net](https://whatabot.net)
-3. Nomor WhatsApp tujuan (gunakan format internasional tanpa tanda `+`).
+1. **Arduino IDE** with the ESP32 board installed.  
+   - [ESP32 Board Installation Guide](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
+2. **Account Whatabot** (free) for get API Key.  
+   - Sign up at [https://whatabot.io](https://whatabot.io)
+3. Recipient's WhatsApp number (use the international format without the `+` sign).
 
-## 🚀 Cara Menggunakan
+## 🚀 How to Use
 
-1. **Clone atau download** repository ini.
-2. Buka file `esp32_notification_whatabot.ino` dengan Arduino IDE.
-3. **Ubah konfigurasi** di bagian atas file:
+1. **Clone or download** this repository.
+2. open file `esp32_notification_whatabot.ino` with Arduino IDE.
+3. **change configuration** at the top of the file:
    ```cpp
-   const char* ssid = "NAMA_WIFI";      // Ganti dengan SSID WiFi Anda
-   const char* pass = "PASSWORD_WIFI";  // Ganti dengan password WiFi
-   String apiKey = "YOUR_API_KEY";      // Ganti dengan API Key dari Whatabot
-   String phone  = "6285xxxxxxxx";      // Ganti dengan nomor tujuan (tanpa +)
+   const char* ssid = "YOUR_WIFI";      // Replace with your Wi-Fi SSID
+   const char* pass = "PASSWORD_WIFI";  // Replace with your password WiFi
+   String apiKey = "YOUR_API_KEY";      // Replace with your API Key from Whatabot
+   String phone  = "6285xxxxxxxx";      // Replace with the destination number (without the +)
