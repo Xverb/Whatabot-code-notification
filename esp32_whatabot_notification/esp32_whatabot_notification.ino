@@ -2,8 +2,8 @@
 #include "Whatabot.h"
 
 // Wi-Fi credentials
-const char* ssid = "Ajisaka";
-const char* pass = "SebelumPajar";
+const char* ssid = "YOUR_SSID";
+const char* pass = "YOUR_PASSWORD";
 
 // Whatabot Credentials
 String apiKey = "YOUR API KEY";
