@@ -16,7 +16,7 @@ class Whatabot {
     // Send a WhatsApp message (using the GET method as described in the Whatabot documentation)
     bool send(String text) {
       if (WiFi.status() != WL_CONNECTED) {
-        Serial.println("WiFi tidak tersambung");
+        Serial.println("Not connected to Wi-Fi");
         return false;
       }
 
@@ -34,10 +34,10 @@ class Whatabot {
       http.end();
 
       if (httpCode == 200) {
-        Serial.println("Pesan terkirim!");
+        Serial.println("Message sent!");
         return true;
       } else {
-        Serial.printf("Gagal, kode HTTP: %d\n", httpCode);
+        Serial.printf("Failure, kode HTTP: %d\n", httpCode);
         return false;
       }
     }
